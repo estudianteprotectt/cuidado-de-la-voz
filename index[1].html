@@ -1,0 +1,91 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Plataforma de Cuidado de la Voz</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+      background-color: #f4f4f9;
+      color: #333;
+    }
+    header {
+      background-color: #6200ea;
+      color: white;
+      padding: 1rem 0;
+    }
+    .container {
+      padding: 2rem;
+    }
+    .button {
+      display: block;
+      width: 80%;
+      max-width: 300px;
+      margin: 1rem auto;
+      padding: 1rem;
+      background-color: #6200ea;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: background-color 0.3s;
+    }
+    .button:hover {
+      background-color: #3700b3;
+    }
+    .info {
+      margin-top: 2rem;
+      padding: 1rem;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      background-color: #fff;
+      display: none;
+    }
+  </style>
+  <script>
+    function showInfo(effectId) {
+      const infoSections = document.querySelectorAll('.info');
+      infoSections.forEach(section => section.style.display = 'none');
+      document.getElementById(effectId).style.display = 'block';
+    }
+  </script>
+</head>
+<body>
+  <header>
+    <h1>Plataforma Interactiva: Cuidado de la Voz</h1>
+  </header>
+  <div class="container">
+    <p>Selecciona un hábito para ver los posibles efectos adversos:</p>
+
+    <a href="#" class="button" onclick="showInfo('hydration')">No hidratarse adecuadamente</a>
+    <a href="#" class="button" onclick="showInfo('noisy')">Hablar en ambientes ruidosos</a>
+    <a href="#" class="button" onclick="showInfo('smoking')">Fumar o beber alcohol</a>
+    <a href="#" class="button" onclick="showInfo('shouting')">Gritar con frecuencia</a>
+
+    <div id="hydration" class="info">
+      <h2>No hidratarse adecuadamente</h2>
+      <p>Puede causar sequedad en las cuerdas vocales, irritación y mayor susceptibilidad a lesiones. Bebe al menos 2 litros de agua al día para mantener una buena salud vocal.</p>
+    </div>
+
+    <div id="noisy" class="info">
+      <h2>Hablar en ambientes ruidosos</h2>
+      <p>Genera fatiga vocal y puede llevar a ronquera crónica. Utiliza un micrófono o haz pausas frecuentes para descansar la voz.</p>
+    </div>
+
+    <div id="smoking" class="info">
+      <h2>Fumar o beber alcohol</h2>
+      <p>El consumo de tabaco o alcohol irrita las cuerdas vocales, reduce la lubricación natural y aumenta el riesgo de disfonía crónica o enfermedades graves.</p>
+    </div>
+
+    <div id="shouting" class="info">
+      <h2>Gritar con frecuencia</h2>
+      <p>El esfuerzo excesivo al gritar puede generar lesiones como nódulos o pólipos en las cuerdas vocales. Es recomendable usar técnicas de proyección vocal.</p>
+    </div>
+  </div>
+</body>
+</html>
